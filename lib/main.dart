@@ -28,41 +28,96 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.teal,
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.white,
-                  child: const Text('Hello'),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                  child: const Text('Hello'),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
-                  child: const Text('Hello'),
-                ),
-              ],
+            const CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('assets/images/avata.jpg'),
             ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Row(
-                children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.yellow,
+            const Text(
+              'Harry Truong',
+              style: TextStyle(
+                fontSize: 43,
+                color: Colors.white,
+                fontFamily: 'Cabin',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const Text(
+              'FLUTTER DEVELOPER',
+              style: TextStyle(
+                fontFamily: 'Smooch',
+                color: Colors.white,
+                fontSize: 36,
+                fontWeight: FontWeight.w500,
+                letterSpacing: 1.3,
+              ),
+            ),
+            const SizedBox(
+              height: 23,
+              width: 150,
+              child: Divider(
+                color: Colors.white,
+                thickness: 2,
+              ),
+            ),
+            Card(
+              color: Colors.white,
+              margin: const EdgeInsets.symmetric(
+                horizontal: 19,
+                vertical: 9,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 9,
+                  horizontal: 13,
+                ),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Text(
+                      '035 234 6803',
+                      style: TextStyle(
+                        fontFamily: 'Smooch',
+                        color: Colors.teal,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 33,
+                        letterSpacing: 1.3,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(
+                horizontal: 19,
+                vertical: 9,
+              ),
+              child: ListTile(
+                leading: Icon(
+                  Icons.alternate_email,
+                  color: Colors.teal,
+                  size: 29,
+                ),
+                title: Text(
+                  'yuhtruong1995@gmail.com',
+                  style: TextStyle(
+                    color: Colors.teal,
+                    fontFamily: 'Smooch',
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
                   ),
-                ],
+                ),
               ),
             ),
           ],
